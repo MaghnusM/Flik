@@ -1,0 +1,82 @@
+0000000000000000000000000000000000000000 137d1c46676c75afb9aea07eee98b279e162f0a3 maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431213713 -0400	clone: from https://github.com/flixpar/swipe_game.git
+137d1c46676c75afb9aea07eee98b279e162f0a3 793b0409c6b4ae5e003035cb323595eca0af16ec maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431214274 -0400	commit: Increased size of arrow
+793b0409c6b4ae5e003035cb323595eca0af16ec a25303623fe0c87a838c030179ca4bec18dd1b2b maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431214333 -0400	commit: Minor Change
+a25303623fe0c87a838c030179ca4bec18dd1b2b 774891ae2313183903b5d74304215098ab358778 maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431306174 -0400	commit: Fixes
+774891ae2313183903b5d74304215098ab358778 8b6c1bb08ac9b77f992a8b4c2a20988f40b00da7 maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431313252 -0400	merge origin/master: Fast-forward
+8b6c1bb08ac9b77f992a8b4c2a20988f40b00da7 75aa3ce740655c84124b7af3fe712a4c1ee73a98 maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431313763 -0400	commit: Commented out fade
+75aa3ce740655c84124b7af3fe712a4c1ee73a98 01c584a6a168dbb82632ef16af6ad3b9cd04c34f maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431361095 -0400	commit: changed main menu to an arrow and moved the starting position of the box covering the arrow closer to the arrow
+01c584a6a168dbb82632ef16af6ad3b9cd04c34f cc40ed3ab612a77334fa01eaf3b1c7e82af3cfcc maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431362568 -0400	commit: Bug Fixes
+cc40ed3ab612a77334fa01eaf3b1c7e82af3cfcc a4a17fd5125b8d5bd62b78dc3fda6fc5feaffe9d maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431363784 -0400	commit: Fixed Delay Issue
+a4a17fd5125b8d5bd62b78dc3fda6fc5feaffe9d 2eedfe8d4a3bda5b16495a7e158898d754ec08dd maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431365817 -0400	commit: Fixed more of the delay issue
+2eedfe8d4a3bda5b16495a7e158898d754ec08dd 7dd945a94233c3d15cd4977effa27764443807c9 maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431365836 -0400	merge origin/master: Fast-forward
+7dd945a94233c3d15cd4977effa27764443807c9 6053f78a459f882cba76cb3872a9b7ec9e9c603f maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431397022 -0400	commit: Fixed delay (again)
+6053f78a459f882cba76cb3872a9b7ec9e9c603f c132e08d8ed1b52ebaafec87470425ac9ab9c4a6 maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431397024 -0400	rebase: checkout origin/master
+c132e08d8ed1b52ebaafec87470425ac9ab9c4a6 6053f78a459f882cba76cb3872a9b7ec9e9c603f maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431397025 -0400	rebase: aborting
+6053f78a459f882cba76cb3872a9b7ec9e9c603f 6c61196da851ab65047cc9b1e467fe8dc0e7ad0f maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431397368 -0400	commit (merge): Merge remote-tracking branch 'origin/master'
+6c61196da851ab65047cc9b1e467fe8dc0e7ad0f 6622d439aad2ff617cf2f66d61f42c108ff4b934 maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431397380 -0400	commit: -
+6622d439aad2ff617cf2f66d61f42c108ff4b934 f506df7474ba335e09f985323a3e2e16dcbea31a maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431439754 -0400	commit: -
+f506df7474ba335e09f985323a3e2e16dcbea31a 4746f7d10dcb42d8f3711648cc0ab5ea83d07cc6 maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431440767 -0400	commit: -
+4746f7d10dcb42d8f3711648cc0ab5ea83d07cc6 1734e5f3353592f97cd269566bcea7fb4194ef4c maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431440771 -0400	rebase: checkout origin/master
+1734e5f3353592f97cd269566bcea7fb4194ef4c 4746f7d10dcb42d8f3711648cc0ab5ea83d07cc6 maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431440772 -0400	rebase: aborting
+4746f7d10dcb42d8f3711648cc0ab5ea83d07cc6 bb22e34138036f7314ea6b06e536d90f9e1ad5ef maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431440784 -0400	commit (merge): Merge remote-tracking branch 'origin/master'
+bb22e34138036f7314ea6b06e536d90f9e1ad5ef 7728b33cacf4cfb19ea20539676d2033a28f2ad9 maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431441280 -0400	commit: -
+7728b33cacf4cfb19ea20539676d2033a28f2ad9 29d0230e5fb8fa0908a152acb5531b0e3d90be56 maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431441962 -0400	commit: Score move
+29d0230e5fb8fa0908a152acb5531b0e3d90be56 1cce2edbaa72846008d816d8e16112906ace732c maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431441965 -0400	rebase: checkout origin/master
+1cce2edbaa72846008d816d8e16112906ace732c 7df05a94e1e6e331eba725078ace1b7f9b021ace maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431441965 -0400	rebase: Score move
+7df05a94e1e6e331eba725078ace1b7f9b021ace 7df05a94e1e6e331eba725078ace1b7f9b021ace maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431441965 -0400	rebase finished: returning to refs/heads/master
+7df05a94e1e6e331eba725078ace1b7f9b021ace 03e1c5d6caa5cec5bf91a351ec3e1e0d7ac96495 maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431443561 -0400	commit: Made difficulty better
+03e1c5d6caa5cec5bf91a351ec3e1e0d7ac96495 f60714e2dad4eb263d2154581b8baa76f9651090 maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431443564 -0400	rebase: checkout origin/master
+f60714e2dad4eb263d2154581b8baa76f9651090 7a7e28354f1bdd6167538b9c6fd5af4d2ee8f61c maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431443564 -0400	rebase: Made difficulty better
+7a7e28354f1bdd6167538b9c6fd5af4d2ee8f61c 7a7e28354f1bdd6167538b9c6fd5af4d2ee8f61c maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431443564 -0400	rebase finished: returning to refs/heads/master
+7a7e28354f1bdd6167538b9c6fd5af4d2ee8f61c 215701c38b71e65aefe9faa967b74e576d82c9eb maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431447829 -0400	commit: -
+215701c38b71e65aefe9faa967b74e576d82c9eb e662a855e8f636d30bfc64228666086404f38501 maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431447843 -0400	commit: -
+e662a855e8f636d30bfc64228666086404f38501 35606cff5d17fce927569dd5501f6f653eadae4b maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431447850 -0400	commit: -
+35606cff5d17fce927569dd5501f6f653eadae4b e0b9ed0229f3b20bfa516807bdeafe9762b77dca maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431447955 -0400	rebase: checkout origin/master
+e0b9ed0229f3b20bfa516807bdeafe9762b77dca b213dad2c289611e91f2a735509a8d19999aca0b maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431447955 -0400	rebase: -
+b213dad2c289611e91f2a735509a8d19999aca0b 5d5d3274c6a932538695ff5d4c418755c51775f6 maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431447955 -0400	rebase: -
+5d5d3274c6a932538695ff5d4c418755c51775f6 5d5d3274c6a932538695ff5d4c418755c51775f6 maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431447955 -0400	rebase finished: returning to refs/heads/master
+5d5d3274c6a932538695ff5d4c418755c51775f6 7235a8335731823c902f20140887ad3da00f00fd maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431451804 -0400	commit: -
+7235a8335731823c902f20140887ad3da00f00fd c9ba5df2ea4be33ae32e5b2c9cc06ba5ecf76329 maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431452698 -0400	commit: poop
+c9ba5df2ea4be33ae32e5b2c9cc06ba5ecf76329 03157ea7f04f1d674391dff5c617e5abb3624b38 maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431453183 -0400	commit: Avenir Font
+03157ea7f04f1d674391dff5c617e5abb3624b38 da75c1f9fe7df3b6f537e53af771bf50272ad115 maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431453190 -0400	commit: Avenir
+da75c1f9fe7df3b6f537e53af771bf50272ad115 28207148082357a0c16cbda39bbdb193c93845d1 maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431456401 -0400	commit: Ratio
+28207148082357a0c16cbda39bbdb193c93845d1 26f2dcb55b5ac2f5bd8b51965d412318dae6ab41 maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431458133 -0400	commit: Fixed Ratios - don't delete commented code
+26f2dcb55b5ac2f5bd8b51965d412318dae6ab41 f8c5c1cbe8808665a749a0eb0cb16cdd366d1a09 maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431463548 -0400	merge origin/master: Fast-forward
+f8c5c1cbe8808665a749a0eb0cb16cdd366d1a09 f43312d984a051e8ddde6b1107e1a25080908a89 maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431467032 -0400	commit: Bug Fixes
+f43312d984a051e8ddde6b1107e1a25080908a89 24b698247e603ec5967bdc891014e97819c320b2 maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431469247 -0400	merge origin/master: Fast-forward
+24b698247e603ec5967bdc891014e97819c320b2 82475187af5a31c3bbef8c5db73457b3bf91c76e maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431487338 -0400	merge origin/master: Fast-forward
+82475187af5a31c3bbef8c5db73457b3bf91c76e db00653670be36ea38856c55d71f2e5e0b7729bf maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431521134 -0400	commit: as!
+db00653670be36ea38856c55d71f2e5e0b7729bf d8e8c60663ac14dde139b4168656aac91ba644af maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431521139 -0400	rebase: checkout origin/master
+d8e8c60663ac14dde139b4168656aac91ba644af 36c550d9f0b7a82580dc4843602475217b255bf8 maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431521140 -0400	rebase: as!
+36c550d9f0b7a82580dc4843602475217b255bf8 36c550d9f0b7a82580dc4843602475217b255bf8 maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431521140 -0400	rebase finished: returning to refs/heads/master
+36c550d9f0b7a82580dc4843602475217b255bf8 362d33ae0705ba5df48acf022813e1675adcec1d maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431537457 -0400	commit: I FIXED SO MUCH!!!
+362d33ae0705ba5df48acf022813e1675adcec1d 8acd1c25f090487a601de9392a0ff86ebda53939 maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431565512 -0400	commit: More fixes
+8acd1c25f090487a601de9392a0ff86ebda53939 4473973acd482c89a46ecfd145e2de83dd83a353 maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431578295 -0400	rebase: checkout origin/master
+4473973acd482c89a46ecfd145e2de83dd83a353 c65749ad700049c85b0ed17a182e153983e1d7e4 maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431578296 -0400	rebase: More fixes
+c65749ad700049c85b0ed17a182e153983e1d7e4 c65749ad700049c85b0ed17a182e153983e1d7e4 maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431578296 -0400	rebase finished: returning to refs/heads/master
+c65749ad700049c85b0ed17a182e153983e1d7e4 ee02216411a7a53fd41c3314975be1ef696cb25e maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431578634 -0400	commit: Fixes?
+ee02216411a7a53fd41c3314975be1ef696cb25e 6d22693e37c7ac042195fe443e965b62951e2de2 maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431579397 -0400	commit: gitignore?
+6d22693e37c7ac042195fe443e965b62951e2de2 1020d86ff3bcb087c6848bf4305336f4b59025a9 maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431615662 -0400	commit: Is it there?
+1020d86ff3bcb087c6848bf4305336f4b59025a9 b675a08fd2065d164475cc032dd1f164e0eb518b maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431616228 -0400	commit: Phasings
+b675a08fd2065d164475cc032dd1f164e0eb518b dbd1cdc0c299ff7f78da0a100915478c9d6e076d maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431616230 -0400	rebase: checkout origin/master
+dbd1cdc0c299ff7f78da0a100915478c9d6e076d e579a5c81b4624f3b1e23a0458b0d120ba917b6f maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431616231 -0400	rebase: Phasings
+e579a5c81b4624f3b1e23a0458b0d120ba917b6f e579a5c81b4624f3b1e23a0458b0d120ba917b6f maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431616231 -0400	rebase finished: returning to refs/heads/master
+e579a5c81b4624f3b1e23a0458b0d120ba917b6f 7ff5396556f6ac55a2e4d009d39c2087c6cd13fd maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431620579 -0400	commit: Fixed Highscore Stuff
+7ff5396556f6ac55a2e4d009d39c2087c6cd13fd 62bf263d42ae49df8775779c1d1ad0db243ecc08 maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431620581 -0400	rebase: checkout origin/master
+62bf263d42ae49df8775779c1d1ad0db243ecc08 52693d2b01378b91e6135a69121c59d230bc145d maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431620582 -0400	rebase: Fixed Highscore Stuff
+52693d2b01378b91e6135a69121c59d230bc145d 52693d2b01378b91e6135a69121c59d230bc145d maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431620582 -0400	rebase finished: returning to refs/heads/master
+52693d2b01378b91e6135a69121c59d230bc145d fb794226549346cc2b90bb127a08bd8a744f67b6 maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431630764 -0400	commit: Fixed the Logo
+fb794226549346cc2b90bb127a08bd8a744f67b6 2b7e06464c04cc4e05151f807c17107a9d88976b maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431634120 -0400	commit: I FIXED ALL ANIMATION ISSUES
+2b7e06464c04cc4e05151f807c17107a9d88976b aa33c9035b9453e77c1798a91d75f653fe9dd59d maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431706558 -0400	commit: Animations
+aa33c9035b9453e77c1798a91d75f653fe9dd59d 3236fff5110dbd3ccb0b5b86b092cf2aa2b1ca8e maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431715282 -0400	commit: Fixes?
+3236fff5110dbd3ccb0b5b86b092cf2aa2b1ca8e e8b9b4b07dc92c98e1f10e2f4bd144a9097e5ede maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431965251 -0400	commit: Random Fixes
+e8b9b4b07dc92c98e1f10e2f4bd144a9097e5ede 84ba59e0ce4e430b4fd0ff559faeea7f6090e0c6 maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1431965260 -0400	commit: Fix?
+84ba59e0ce4e430b4fd0ff559faeea7f6090e0c6 a8aa89120d48f7fcaa034c9246ae6bbcbd3ba91f maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1432001118 -0400	commit: YUSSS AWESOME ARCADE!
+a8aa89120d48f7fcaa034c9246ae6bbcbd3ba91f 49e4ea0d11b25426259da3897bf6bbc7908f6fd0 maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1432047304 -0400	commit: Fixes
+49e4ea0d11b25426259da3897bf6bbc7908f6fd0 019089dfd24568975bef27e52e678899927a4fc8 maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1432243413 -0400	commit: ?
+019089dfd24568975bef27e52e678899927a4fc8 e7f3459b36cf42f45cae38ac4a3000eb1ef8bb0f maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1432693737 -0400	commit: Shit ton of changes. Touch sensibility + iAds.
+e7f3459b36cf42f45cae38ac4a3000eb1ef8bb0f 7d670222af04ce208a638d82447c1ee4e8903fb4 maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1432952330 -0400	commit: Sounds!
+7d670222af04ce208a638d82447c1ee4e8903fb4 180c76046210cfae024d3fb51468b6dbbe27677e maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1433210770 -0400	commit: Fixes?
+180c76046210cfae024d3fb51468b6dbbe27677e 32675cc6de21fea4ec3bc5b84a10f4d1095bbadb maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1433211758 -0400	commit: Fixed some of the interstitial ad so it doesn't load twice.
+32675cc6de21fea4ec3bc5b84a10f4d1095bbadb 7797a6243a7afcbfeb89a101bf8944949c3c4e74 maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1433229152 -0400	commit: Ads seem to work better!
+7797a6243a7afcbfeb89a101bf8944949c3c4e74 9e14ad66cfa064a71cdec757b3933b9927755afb maghnus <maghnus@Maghnuss-MacBook-Pro.local> 1433783492 -0400	commit: -=-
