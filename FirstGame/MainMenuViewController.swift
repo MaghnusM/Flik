@@ -9,11 +9,9 @@
 import UIKit
 import iAd
 import AVFoundation
-import StoreKit
 
 var backgroundMusic = AVAudioPlayer()
 var musicSwitch: Bool?
-//let buyStation = PurchaseViewController()
 
 
 class MainMenuViewController: UIViewController {
@@ -146,11 +144,6 @@ class MainMenuViewController: UIViewController {
         swipeView.userInteractionEnabled = true
         MainMenuView.insertSubview(swipeView, aboveSubview: MainMenuView)
         
-        //screen.height/2 - arrowHeight/2.2
-
-    
-        //addBanner()
-        
         backgroundMusic = self.setupAudioPlayerWithFile("Soundtrack", type: "aif")
         
         backgroundMusic.play()
@@ -193,7 +186,6 @@ class MainMenuViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func changeBackground() {
@@ -206,20 +198,13 @@ class MainMenuViewController: UIViewController {
         switch count { //green, orange, red, blue
         case 1:
             UIView.animateWithDuration(1.5, delay: 0.0, options: (UIViewAnimationOptions.AllowUserInteraction), animations: {self.MainMenuView.backgroundColor = UIColor(red: 1.0, green: 0.16, blue: 0.24, alpha: 1.0)}, completion: nil)
-            //playButton.setImage(play_red, forState: .Normal)
-            //instructionsButton.setImage(instructions_red, forState: .Normal)
         case 2:
             UIView.animateWithDuration(1.5, delay: 0.0, options: (UIViewAnimationOptions.AllowUserInteraction), animations: {self.MainMenuView.backgroundColor = UIColor(red: 0.15, green: 0.32, blue: 0.7, alpha: 1.0)}, completion: nil)
-            //playButton.setImage(play_orange, forState: .Normal)
-            //instructionsButton.setImage(instructions_orange, forState: .Normal)
         case 3:
             UIView.animateWithDuration(1.5, delay: 0.0, options: (UIViewAnimationOptions.AllowUserInteraction), animations: {self.MainMenuView.backgroundColor = UIColor(red: 0, green: 0.8, blue: 0.4, alpha: 1.0)}, completion: nil)
-            //playButton.setImage(play_blue, forState: .Normal)
-            //instructionsButton.setImage(instructions_blue, forState: .Normal)
+
         case 4:
             UIView.animateWithDuration(1.5, delay: 0.0, options: (UIViewAnimationOptions.AllowUserInteraction), animations: {self.MainMenuView.backgroundColor = UIColor(red: 1.0, green: 0.43, blue: 0.2, alpha: 1.0)}, completion: nil)
-            //playButton.setImage(play_green, forState: .Normal)
-            //instructionsButton.setImage(instructions_green, forState: .Normal)
         default:
             MainMenuView.backgroundColor = UIColor(red: 0.15, green: 0.32, blue: 0.7, alpha: 1.0)
         }
@@ -279,31 +264,6 @@ class MainMenuViewController: UIViewController {
     func arcadeSegue() {
         self.performSegueWithIdentifier("arcade_segue", sender: self)
     }
-    /*
-    func addBanner() {
-        
-        self.canDisplayBannerAds = true
-        var adBannerView = ADBannerView(frame: CGRect.zeroRect)
-        
-        MainMenuView.addSubview(adBannerView)
-        
-        
-        adBannerView.setTranslatesAutoresizingMaskIntoConstraints(false)
-        let views = ["adBannerView": adBannerView]
-        
-        let constrainWidthBanner = NSLayoutConstraint.constraintsWithVisualFormat("H:[adBannerView(\(screen.width))]", options: NSLayoutFormatOptions(0), metrics: nil, views: views)
-        
-        MainMenuView.addConstraints(constrainWidthBanner)
-        
-        let bannerConstrainX = NSLayoutConstraint(item: adBannerView, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: MainMenuView, attribute: NSLayoutAttribute.CenterX, multiplier: 1, constant: 0)
-        
-        let bannerConstrainY = NSLayoutConstraint(item: adBannerView, attribute: NSLayoutAttribute.BottomMargin, relatedBy: NSLayoutRelation.Equal, toItem: MainMenuView, attribute: NSLayoutAttribute.BottomMargin, multiplier: 1, constant: 0)
-        
-        
-        MainMenuView.addConstraint(bannerConstrainX)
-        MainMenuView.addConstraint(bannerConstrainY)
-    }
-    */
     
     func addMusicIcon() {
         musicIcon.frame = CGRectMake((screen.width - 50),20,25,25)
@@ -314,14 +274,6 @@ class MainMenuViewController: UIViewController {
         musicIcon.alpha = 0
     }
     
-    
-        /*noAdsIcon.text = "NO ADS"
-        noAdsIcon.font = UIFont(name: "Avenir Black", size: 50)
-        noAdsIcon.textColor = UIColor.whiteColor()
-        let labelLeftX = NSLayoutConstraint(item: noAdsIcon, attribute: NSLayoutAttribute.LeftMargin, relatedBy: NSLayoutRelation.Equal, toItem: MainMenuView, attribute: NSLayoutAttribute.LeftMargin, multiplier: 1, constant: 20)
-        let labelTopY = NSLayoutConstraint(item: noAdsIcon, attribute: NSLayoutAttribute.TopMargin, relatedBy: NSLayoutRelation.Equal, toItem: MainMenuView, attribute: NSLayoutAttribute.TopMargin, multiplier: 1, constant: 20)
-*/
-
     
     func toggleMusic(sender: UIButton) {
         
@@ -343,8 +295,6 @@ class MainMenuViewController: UIViewController {
 
 var showInstructionClassic: Bool?
 var showInstructionArcade: Bool?
-var intAdLoadedOnce: Bool?
-var intermitAdPull: Int?
 
 
 

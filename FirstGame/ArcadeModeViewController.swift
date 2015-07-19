@@ -103,12 +103,7 @@ class ArcadeModeViewController: UIViewController,  ADBannerViewDelegate {
         resetTimer()
         getHighscore()
         
-        if(noAds == false) {
-            //adBannerView.delegate = self
-            addBanner()
-        }
-        //addMusicIcon()
-        
+        addBanner()
     }
     
     @IBOutlet var mainView: UIView!
@@ -352,7 +347,6 @@ class ArcadeModeViewController: UIViewController,  ADBannerViewDelegate {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         var nextView: GameOverViewController = segue.destinationViewController as! GameOverViewController
-        intAdLoadedOnce = false
         nextView.score = self.score
         nextView.mode = 2
         nextView.initialColor = currentColor
@@ -603,61 +597,8 @@ class ArcadeModeViewController: UIViewController,  ADBannerViewDelegate {
     }
     
     func addBanner() {
-        
         self.canDisplayBannerAds = true
-        /*
-        var adBannerViewFrame = adBannerView.frame
-        var alphaBan: CGFloat?
-        
-        mainView.addSubview(adBannerView)
-        
-        
-        adBannerView.setTranslatesAutoresizingMaskIntoConstraints(false)
-        let views = ["adBannerView": adBannerView]
-        
-        
-        if adBannerView.bannerLoaded {
-            
-            alphaBan = 1
-            bannerIsVisible = true
-        }
-            
-        else {
-            alphaBan = 0
-            bannerIsVisible = false
-        }
-        
-        
-        let constrainWidthBanner = NSLayoutConstraint.constraintsWithVisualFormat("H:[adBannerView(\(screen.width))]", options: NSLayoutFormatOptions(0), metrics: nil, views: views)
-        
-        let constrainHeightBanner = NSLayoutConstraint.constraintsWithVisualFormat("V:[adBannerView(\(50))]", options: NSLayoutFormatOptions(0), metrics: nil, views: views)
-        
-        mainView.addConstraints(constrainWidthBanner)
-        mainView.addConstraints(constrainHeightBanner)
-        
-        let bannerConstrainX = NSLayoutConstraint(item: adBannerView, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: mainView, attribute: NSLayoutAttribute.CenterX, multiplier: 1, constant: 0)
-        
-        let bannerConstrainY = NSLayoutConstraint(item: adBannerView, attribute: NSLayoutAttribute.BottomMargin, relatedBy: NSLayoutRelation.Equal, toItem: mainView, attribute: NSLayoutAttribute.BottomMargin, multiplier: 1, constant: 0)
-        
-        mainView.addConstraint(bannerConstrainY)
-        mainView.addConstraint(bannerConstrainX)
-        
-        UIView.animateWithDuration(0.2, delay: 0.0, options: nil, animations: {
-            self.adBannerView.alpha = alphaBan!
-            self.view.layoutIfNeeded()}, completion: nil)
-*/
     }
-    /*
-    func bannerView(banner: ADBannerView!, didFailToReceiveAdWithError error: NSError!) {
-        println("problem!")
-        if (self.bannerIsVisible) {
-            UIView.animateWithDuration(0.2, delay: 0.0, options: nil, animations: {
-                self.adBannerView.alpha = 0 }, completion: nil)
-            self.bannerIsVisible = false
-        }
-        
-    }
-*/
 
     func addMusicIcon() {
         musicIcon.frame = CGRectMake((screen.width - 50),20,25,25)

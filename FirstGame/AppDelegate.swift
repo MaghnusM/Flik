@@ -37,7 +37,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
-        intermitAdPull = 1
         //println("at activation: \(intermitAdPull)")
 
     }

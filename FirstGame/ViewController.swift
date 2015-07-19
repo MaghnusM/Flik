@@ -98,12 +98,7 @@ class ViewController: UIViewController, ADBannerViewDelegate {
         scoreTimer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("incrementTime"), userInfo: nil, repeats: true)
         firstChangeColor()
         resetTimer()
-        
-        if(noAds == false) {
-            //adBannerView.delegate = self
-            addBanner()
-        }
-        //addMusicIcon()
+        addBanner()
     }
     
     
@@ -338,26 +333,14 @@ class ViewController: UIViewController, ADBannerViewDelegate {
         //mainView.backgroundColor = color //sets the background color to the random color
         currentColor = c
         lastColor = c
-        
-        // adds another view on top for the gestures to occur on
-        
-        /*
-        var swipeView = UIView(frame: CGRectMake(0, 0, screen.width, screen.height))
-        swipeView.userInteractionEnabled = true
-        mainView.insertSubview(swipeView, aboveSubview: slideView)
-
-        UIView.animateWithDuration(difficulty, delay: 0.0, options: UIViewAnimationOptions.AllowUserInteraction, animations: {slideView.frame = slideViewTransform}, completion: nil)
-*/
-        
     }
     
     func gameLost() {
         self.performSegueWithIdentifier("game_over", sender: self)
-       /* UIView.animateWithDuration(1.0, delay: 0.0, options: nil, animations: {self.arrowView.alpha = 0}, completion: {(v: Bool) in self.performSegueWithIdentifier("game_over", sender: self)})*/
     }
     
     func calculateScore() {
-        score++ //+= Int(5.0*(difficulty - elapsedTime/10.0)/difficulty)
+        score++
     }
     
     func incrementTime() {
@@ -449,7 +432,6 @@ class ViewController: UIViewController, ADBannerViewDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         var nextView: GameOverViewController = segue.destinationViewController as! GameOverViewController
         nextView.score = self.score
-        intAdLoadedOnce = false
         nextView.mode = 1
         nextView.initialColor = currentColor
     }
@@ -487,62 +469,8 @@ class ViewController: UIViewController, ADBannerViewDelegate {
     func addBanner() {
         
         self.canDisplayBannerAds = true
-        /*
-        var adBannerViewFrame = adBannerView.frame
-        var alphaBan: CGFloat?
-        
-        adBannerView.setTranslatesAutoresizingMaskIntoConstraints(false)
-        let views = ["adBannerView": adBannerView]
-        
-        
-        if adBannerView.bannerLoaded {
-            
-            alphaBan = 1
-            bannerIsVisible = true
-        }
-        
-        else {
-            alphaBan = 0
-            bannerIsVisible = false
-        }
-
-
-        mainView.addSubview(adBannerView)
-
-        let constrainWidthBanner = NSLayoutConstraint.constraintsWithVisualFormat("H:[adBannerView(\(screen.width))]", options: NSLayoutFormatOptions(0), metrics: nil, views: views)
-            
-        let constrainHeightBanner = NSLayoutConstraint.constraintsWithVisualFormat("V:[adBannerView(\(50))]", options: NSLayoutFormatOptions(0), metrics: nil, views: views)
-            
-        mainView.addConstraints(constrainWidthBanner)
-        mainView.addConstraints(constrainHeightBanner)
-            
-        let bannerConstrainX = NSLayoutConstraint(item: adBannerView, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: mainView, attribute: NSLayoutAttribute.CenterX, multiplier: 1, constant: 0)
-        
-        let bannerConstrainY = NSLayoutConstraint(item: adBannerView, attribute: NSLayoutAttribute.BottomMargin, relatedBy: NSLayoutRelation.Equal, toItem: mainView, attribute: NSLayoutAttribute.BottomMargin, multiplier: 1, constant: 0)
-        
-        mainView.addConstraint(bannerConstrainY)
-        mainView.addConstraint(bannerConstrainX)
-        
-        
-        UIView.animateWithDuration(0.2, delay: 0.0, options: nil, animations: {
-            self.adBannerView.alpha = alphaBan!
-            self.view.layoutIfNeeded()}, completion: nil)
-*/
 
     }
-    /*
-    func bannerView(banner: ADBannerView!, didFailToReceiveAdWithError error: NSError!) {
-        println("problem!")
-        println(error)
-        if (self.bannerIsVisible) {
-            UIView.animateWithDuration(0.2, delay: 0.0, options: nil, animations: {
-                self.adBannerView.alpha = 0 }, completion: nil)
-            self.bannerIsVisible = false
-        }
-
-    }
-*/
-
 
     func addMusicIcon() {
         musicIcon.frame = CGRectMake((screen.width - 50),20,25,25)

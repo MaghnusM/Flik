@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7B35D9461AB90201003A3DA8 /* ai in Resources */ = {isa = PBXBuildFile; fileRef = 7B35D9451AB90201003A3DA8 /* ai */; };
 		7B36655B1B01999D001DFB61 /* ArcadeModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B36655A1B01999D001DFB61 /* ArcadeModeViewController.swift */; };
 		7B5142641ABB762C0094CE1B /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5142631ABB762C0094CE1B /* MainMenuViewController.swift */; };
 		7B6269A41AB6FA7C00A92B68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6269A31AB6FA7C00A92B68 /* AppDelegate.swift */; };
@@ -38,7 +37,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7B35D9451AB90201003A3DA8 /* ai */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ai; sourceTree = "<group>"; };
 		7B36655A1B01999D001DFB61 /* ArcadeModeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArcadeModeViewController.swift; sourceTree = "<group>"; };
 		7B5142631ABB762C0094CE1B /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		7B521DC51B044BA00086A632 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = FirstGame/Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -111,7 +109,6 @@
 				7B5142631ABB762C0094CE1B /* MainMenuViewController.swift */,
 				7B8840BC1AB90D0D008B89FE /* GameOverViewController.swift */,
 				7B8840BE1AB9132E008B89FE /* FileManager.swift */,
-				7B35D9451AB90201003A3DA8 /* ai */,
 				7B6269A31AB6FA7C00A92B68 /* AppDelegate.swift */,
 				7B6269A51AB6FA7C00A92B68 /* ViewController.swift */,
 				F9AD155C1B41028800CB4DBE /* Soundtrack.aif */,
@@ -237,7 +234,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B35D9461AB90201003A3DA8 /* ai in Resources */,
 				7B6269A91AB6FA7C00A92B68 /* Main.storyboard in Resources */,
 				7B6269AE1AB6FA7C00A92B68 /* LaunchScreen.xib in Resources */,
 				7B6269C41AB70F4400A92B68 /* Media.xcassets in Resources */,
