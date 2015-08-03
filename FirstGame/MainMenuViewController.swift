@@ -51,6 +51,11 @@ class MainMenuViewController: UIViewController {
     @IBOutlet var swipeDownController: UISwipeGestureRecognizer!
     
     override func viewDidLoad() {
+        
+        AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient, error: nil)
+        AVAudioSession.sharedInstance().setActive(true, error: nil)
+        UIApplication.sharedApplication().beginReceivingRemoteControlEvents()
+        
         showInstructionClassic = true
         showInstructionArcade = true
         
@@ -146,8 +151,11 @@ class MainMenuViewController: UIViewController {
         
         backgroundMusic = self.setupAudioPlayerWithFile("Soundtrack", type: "aif")
         
-        backgroundMusic.play()
-        musicSwitch = true
+        musicSwitch = false
+        if(!AVAudioSession.sharedInstance().secondaryAudioShouldBeSilencedHint) {
+            backgroundMusic.play()
+            musicSwitch = true
+        }
         
         addMusicIcon()
         
@@ -276,15 +284,17 @@ class MainMenuViewController: UIViewController {
     
     
     func toggleMusic(sender: UIButton) {
-        
+                
         if(musicSwitch == true) {
             backgroundMusic.stop()
+            AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient, error: nil)
             musicSwitch = false
         }
             
         else {
             backgroundMusic = self.setupAudioPlayerWithFile("Soundtrack", type: "aif")
             backgroundMusic.play()
+            AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, error: nil)
             musicSwitch = true
         }
     }
