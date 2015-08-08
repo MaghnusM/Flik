@@ -9,6 +9,7 @@
 import UIKit
 import iAd
 import AVFoundation
+import GameKit
 
 var backgroundMusic = AVAudioPlayer()
 var musicSwitch: Bool?
@@ -158,6 +159,7 @@ class MainMenuViewController: UIViewController {
         }
         
         addMusicIcon()
+        // authenticatePlayer()
         
     }
     
@@ -298,6 +300,20 @@ class MainMenuViewController: UIViewController {
             musicSwitch = true
         }
     }
+    
+//    func authenticatePlayer() {
+//        
+//        var localPlayer = GKLocalPlayer.localPlayer()
+//        localPlayer.authenticateHandler = {(viewController : !, error : NSError!) -> Void in
+//            if viewController != nil {
+//                self.presentViewController(viewController, animated: true, completion: nil)
+//            }
+//                
+//            else {
+//                println((GKLocalPlayer.localPlayer().authenticated))
+//            }
+//        }
+//    }
 
 }
 

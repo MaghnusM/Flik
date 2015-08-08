@@ -339,7 +339,7 @@ class ArcadeModeViewController: UIViewController,  ADBannerViewDelegate {
     
     func resetTimer() {
         //println("raw score: \(rawScore)")
-        difficulty = 10/pow(Double(rawScore), 0.6)+0.15
+        difficulty = 0.8 + 10/pow(Double(rawScore), 1.25)
         timer.invalidate()
         timer = NSTimer.scheduledTimerWithTimeInterval(difficulty, target: self, selector: Selector("gameLost"), userInfo: nil, repeats: false)
         elapsedTime = 0
@@ -597,7 +597,7 @@ class ArcadeModeViewController: UIViewController,  ADBannerViewDelegate {
     }
     
     func addBanner() {
-        self.canDisplayBannerAds = true
+        self.canDisplayBannerAds = false
     }
 
     func addMusicIcon() {

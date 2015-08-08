@@ -18,6 +18,7 @@ class GameOverViewController: UIViewController, ADBannerViewDelegate {
     var score : Int!
     var mode : Int!
     var initialColor : Int!
+    var appID = 1000536418
     
     var scoreLabel = UILabel()
     var highscoreLabel = UILabel()
@@ -114,8 +115,6 @@ class GameOverViewController: UIViewController, ADBannerViewDelegate {
         scoreLabel.textColor = UIColor.whiteColor()
         scoreLabel.font = UIFont(name: "Avenir Black", size: 60)
         scoreLabel.setTranslatesAutoresizingMaskIntoConstraints(false)
-
-        //scoreLabel.frame = CGRectMake(0, screen.height/4, 100, 100)
         
         mainView.addSubview(scoreLabel)
         
@@ -128,6 +127,8 @@ class GameOverViewController: UIViewController, ADBannerViewDelegate {
         classicArrowView.image = classicArrow
         arcadeArrowView.image = arcadeArrow
         addMusicIcon()
+        addEndGameOptionButton(buttonTitle: "RATE", xOffset: (-screen.width/4), yOffset: (arrowHeight/2.2 + arrowHeight))
+        addEndGameOptionButton(buttonTitle: "MORE GAMES", xOffset: (screen.width/4), yOffset: (arrowHeight/2.2 + arrowHeight))
     }
 
     override func viewDidAppear(animated: Bool) {
@@ -185,14 +186,14 @@ class GameOverViewController: UIViewController, ADBannerViewDelegate {
         self.createDownTransparentBox(mainView, randomX: (screen.width/2 - self.arrowWidth/2), randomY: screen.height/2 + self.arrowHeight/2.2)
         
         UIView.animateWithDuration(1.0, animations: {
-            self.classicArrowView.alpha = 1.0
-            self.arcadeArrowView.alpha = 1.0
-            self.musicIcon.alpha = 1
+            for innerView in self.mainView.subviews {
+                let alphaView = innerView as! UIView
+                alphaView.alpha = 1
+            }
+            
             }, completion: { (value: Bool) in
                 self.swipeUpController.enabled = true
                 self.swipeDownController.enabled = true
-                
-
         })
     }
     
@@ -234,8 +235,6 @@ class GameOverViewController: UIViewController, ADBannerViewDelegate {
         let arcadeArrowCenterY = NSLayoutConstraint(item: arcadeArrowView, attribute: NSLayoutAttribute.TopMargin, relatedBy: NSLayoutRelation.Equal, toItem: mainView, attribute: NSLayoutAttribute.CenterY, multiplier: 1, constant: arrowHeight/2.2)
         mainView.addConstraint(classicArrowCenterY)
         mainView.addConstraint(arcadeArrowCenterY)
-        
-        //println("finished setting up arrows")
         
     }
     
@@ -324,6 +323,21 @@ class GameOverViewController: UIViewController, ADBannerViewDelegate {
         self.performSegueWithIdentifier("arcade_segue", sender: self)
     }
     
+    func addEndGameOptionButton(#buttonTitle: String, xOffset: CGFloat, yOffset: CGFloat) {
+        var optionButton = UIButton.buttonWithType(UIButtonType.System) as! UIButton
+        optionButton.addTarget(self, action: "linkHandler:", forControlEvents: UIControlEvents.TouchDown)
+        mainView.addSubview(optionButton)
+        optionButton.alpha = 0
+        optionButton.setTranslatesAutoresizingMaskIntoConstraints(false)
+        optionButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        let optionButtonX = NSLayoutConstraint(item: optionButton, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: mainView, attribute: NSLayoutAttribute.CenterX, multiplier: 1, constant: xOffset)
+        let optionButtonY = NSLayoutConstraint(item: optionButton, attribute: NSLayoutAttribute.BottomMargin, relatedBy: NSLayoutRelation.Equal, toItem: mainView, attribute: NSLayoutAttribute.CenterY, multiplier: 1, constant: yOffset)
+        optionButton.setTitle(buttonTitle, forState: .Normal)
+        optionButton.titleLabel!.font! = UIFont(name: "Avenir Black", size: 22.5)!
+        mainView.addConstraint(optionButtonX)
+        mainView.addConstraint(optionButtonY)
+    }
+    
     func addMusicIcon() {
         musicIcon.frame = CGRectMake((screen.width - 50),20,25,25)
         musicIcon.setImage(UIImage(named: "musicIcon"), forState: .Normal)
@@ -331,6 +345,17 @@ class GameOverViewController: UIViewController, ADBannerViewDelegate {
         musicIcon.addTarget(self, action: "toggleMusic:", forControlEvents: UIControlEvents.TouchDown)
         mainView.addSubview(musicIcon)
         musicIcon.alpha = 0
+    }
+    
+    func linkHandler(sender: UIButton) {
+        if let title = sender.currentTitle {
+            println("sender current title is : \(title)")
+            if sender.currentTitle == "RATE" {
+                UIApplication.sharedApplication().openURL(NSURL(string : "itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=\(appID)&onlyLatestVersion=true&pageNumber=0&sortOrdering=1)")!)
+            } else if sender.currentTitle == "MORE GAMES" {
+                UIApplication.sharedApplication().openURL(NSURL(string : "https://itunes.apple.com/us/artist/maghnus-mareneck/id1000536417")!)
+            }
+        }
     }
     
     func toggleMusic(sender: UIButton) {
@@ -349,10 +374,31 @@ class GameOverViewController: UIViewController, ADBannerViewDelegate {
    
     override func viewWillDisappear(animated: Bool) {
     }
-    
-    
-    
-    
 }
+    
+//    func showGameCenter() {
+//        let gameCenterController = new GKGameCenterViewController()
+//        if (gameCenterController != nil) {
+//            gameCenterController.gameCenterDelegate = self;
+//            gameCenterController.viewState = GKGameCenterViewControllerStateAchievements;
+//            UIViewController *vc = self.view.window.rootViewController;
+//            [vc presentViewController: gameCenterController animated: YES completion:nil];
+//        }
+//    } else if ([[touchedNode name] isEqualToString:@"Leaderboard"]) {
+//        GKGameCenterViewController *gameCenterController = [[GKGameCenterViewController alloc] init];
+//        if (gameCenterController != nil)
+//        {
+//            gameCenterController.gameCenterDelegate = self;
+//            gameCenterController.viewState = GKGameCenterViewControllerStateLeaderboards;
+//            UIViewController *vc = self.view.window.rootViewController;
+//            [vc presentViewController: gameCenterController animated: YES completion:nil];
+//        }
+//    }
+//    }
+
+    
+    
+    
+
 
 

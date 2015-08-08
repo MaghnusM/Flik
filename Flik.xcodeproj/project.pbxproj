@@ -22,6 +22,7 @@
 		EB3CC80F1B154BA1009E64CC /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB3CC80D1B154B45009E64CC /* iAd.framework */; };
 		EB3CC8101B1554E4009E64CC /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB3CC80D1B154B45009E64CC /* iAd.framework */; };
 		EBFA614B1B2956DC00783FD8 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBFA614A1B2956DC00783FD8 /* StoreKit.framework */; };
+		F9A5FCE31B70716600C41917 /* GKGameCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A5FCE21B70716600C41917 /* GKGameCenterViewController.swift */; };
 		F9AD155D1B41028800CB4DBE /* Soundtrack.aif in Resources */ = {isa = PBXBuildFile; fileRef = F9AD155C1B41028800CB4DBE /* Soundtrack.aif */; };
 		F9AD155E1B41028800CB4DBE /* Soundtrack.aif in Resources */ = {isa = PBXBuildFile; fileRef = F9AD155C1B41028800CB4DBE /* Soundtrack.aif */; };
 /* End PBXBuildFile section */
@@ -57,6 +58,7 @@
 		7B907D861B02F2FB00832DB6 /* customSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customSegue.swift; sourceTree = "<group>"; };
 		EB3CC80D1B154B45009E64CC /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		EBFA614A1B2956DC00783FD8 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		F9A5FCE21B70716600C41917 /* GKGameCenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GKGameCenterViewController.swift; sourceTree = "<group>"; };
 		F9AD155C1B41028800CB4DBE /* Soundtrack.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = Soundtrack.aif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +112,7 @@
 				7B8840BC1AB90D0D008B89FE /* GameOverViewController.swift */,
 				7B8840BE1AB9132E008B89FE /* FileManager.swift */,
 				7B6269A31AB6FA7C00A92B68 /* AppDelegate.swift */,
+				F9A5FCE21B70716600C41917 /* GKGameCenterViewController.swift */,
 				7B6269A51AB6FA7C00A92B68 /* ViewController.swift */,
 				F9AD155C1B41028800CB4DBE /* Soundtrack.aif */,
 				7B6269A71AB6FA7C00A92B68 /* Main.storyboard */,
@@ -263,6 +266,7 @@
 				7B8840BD1AB90D0D008B89FE /* GameOverViewController.swift in Sources */,
 				7B8840BF1AB9132E008B89FE /* FileManager.swift in Sources */,
 				7B36655B1B01999D001DFB61 /* ArcadeModeViewController.swift in Sources */,
+				F9A5FCE31B70716600C41917 /* GKGameCenterViewController.swift in Sources */,
 				7B907D871B02F2FB00832DB6 /* customSegue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
