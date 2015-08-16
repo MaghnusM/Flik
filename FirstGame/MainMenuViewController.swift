@@ -16,10 +16,6 @@ var musicSwitch: Bool?
 
 
 class MainMenuViewController: UIViewController {
-
-    @IBOutlet var MainMenuView: UIView!
-    @IBOutlet weak var playButton: UIButton!
-    @IBOutlet weak var instructionsButton: UIButton!
     
     var timer = NSTimer()
     var count = 0
@@ -29,6 +25,8 @@ class MainMenuViewController: UIViewController {
     let classicArrow = UIImage(named: "ClassicArrow")
     let arcadeArrow = UIImage(named: "ArcadeArrow")
     let logoPicture = UIImage(named: "logo")
+    
+    var MainMenuView = UIView()
     
     let fileManager = FileManager()
     
@@ -57,6 +55,11 @@ class MainMenuViewController: UIViewController {
         AVAudioSession.sharedInstance().setActive(true, error: nil)
         UIApplication.sharedApplication().beginReceivingRemoteControlEvents()
         
+        let screen = UIScreen.mainScreen().bounds
+        
+        MainMenuView.frame = CGRectMake(0, 0, screen.width, screen.height)
+        view.addSubview(MainMenuView)
+        
         showInstructionClassic = true
         showInstructionArcade = true
         
@@ -77,8 +80,6 @@ class MainMenuViewController: UIViewController {
         logoPictureView.alpha = 0.0
         arcadeArrowView.alpha = 0.01
         classicArrowView.alpha = 0.01
-        
-        let screen = UIScreen.mainScreen().bounds
         
         logoRatioWidthToHeight = 1250/678
         arrowWidthRatio = 170/375

@@ -8,24 +8,7 @@
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController title="Game" id="vXZ-lx-hvc" customClass="ViewController" customModule="Flik" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <gestureRecognizers/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="JZG-PB-hCS" appends="YES" id="e0G-bQ-FiB"/>
-                            <outletCollection property="gestureRecognizers" destination="19d-qP-mHL" appends="YES" id="BJ6-G3-Fyf"/>
-                            <outletCollection property="gestureRecognizers" destination="qpd-ey-JgS" appends="YES" id="wFE-dV-wC1"/>
-                            <outletCollection property="gestureRecognizers" destination="9Oo-OQ-f17" appends="YES" id="uHK-L6-Ich"/>
-                        </connections>
-                    </view>
                     <connections>
-                        <outlet property="mainView" destination="kh9-bI-dsS" id="vfi-rZ-NDq"/>
                         <segue destination="5XY-cq-nTe" kind="custom" identifier="game_over" customClass="customSegue" customModule="Flik" customModuleProvider="target" id="rJd-53-wHL"/>
                     </connections>
                 </viewController>
@@ -57,17 +40,7 @@
         <scene sceneID="AJn-T9-jfZ">
             <objects>
                 <viewController id="YUJ-Au-tgy" customClass="ArcadeModeViewController" customModule="Flik" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Cnw-fb-7Uz"/>
-                        <viewControllerLayoutGuide type="bottom" id="1xi-Ov-4M5"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="hvD-qN-fvX">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
                     <connections>
-                        <outlet property="mainView" destination="hvD-qN-fvX" id="Oyu-eF-tO0"/>
                         <segue destination="5XY-cq-nTe" kind="custom" identifier="game_over" customClass="customSegue" customModule="Flik" customModuleProvider="target" id="bC9-Tg-TLS"/>
                     </connections>
                 </viewController>
@@ -103,35 +76,7 @@
         <scene sceneID="ITh-GD-Dg3">
             <objects>
                 <viewController title="MainMenu" id="pzV-xC-Gq3" customClass="MainMenuViewController" customModule="Flik" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="NyU-Ov-btz"/>
-                        <viewControllerLayoutGuide type="bottom" id="Ycy-Fj-Cbm"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="1aZ-ZQ-OeU">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="dco-oi-mRy">
-                                <rect key="frame" x="144" y="250" width="212" height="90"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="230" id="bDM-VS-xol"/>
-                                    <constraint firstAttribute="height" constant="99" id="nAb-Gf-lvz"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <gestureRecognizers/>
-                        <constraints>
-                            <constraint firstAttribute="centerY" secondItem="dco-oi-mRy" secondAttribute="centerY" id="f0y-X0-2bK"/>
-                            <constraint firstAttribute="centerX" secondItem="dco-oi-mRy" secondAttribute="centerX" id="y2s-qJ-ne5"/>
-                        </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="kVl-1g-miM" appends="YES" id="aWh-0a-zoA"/>
-                            <outletCollection property="gestureRecognizers" destination="nD2-9f-f83" appends="YES" id="NRT-gB-V96"/>
-                        </connections>
-                    </view>
                     <connections>
-                        <outlet property="MainMenuView" destination="1aZ-ZQ-OeU" id="rT8-XE-aZd"/>
                         <outlet property="SwipeDownController" destination="nD2-9f-f83" id="qgj-Bf-fwP"/>
                         <outlet property="swipeUpController" destination="kVl-1g-miM" id="rTL-fB-Z5L"/>
                     </connections>
@@ -151,12 +96,9 @@
             <point key="canvasLocation" x="-338" y="-351"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="logo" width="1250" height="678"/>
-    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6xw-ZW-tZM"/>
-        <segue reference="rJd-53-wHL"/>
-        <segue reference="Xbh-lC-Boz"/>
+        <segue reference="bC9-Tg-TLS"/>
+        <segue reference="QP1-vW-aZT"/>
+        <segue reference="nui-nB-E3W"/>
     </inferredMetricsTieBreakers>
 </document>

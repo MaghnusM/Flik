@@ -23,6 +23,8 @@ class ViewController: UIViewController, ADBannerViewDelegate {
     var timer = NSTimer()
     var scoreTimer = NSTimer()
     
+    var mainView = UIView()
+    
     var lastColor = 0
     var currentColor = 5
     var scoreSize: CGFloat = 60
@@ -51,7 +53,6 @@ class ViewController: UIViewController, ADBannerViewDelegate {
     let screen = UIScreen.mainScreen().bounds
     
     var musicIcon = UIButton.buttonWithType(UIButtonType.System) as! UIButton
-    //var adBannerView = ADBannerView(frame: CGRect.zeroRect)
     
     func setupAudioPlayerWithFile(file: NSString, type: NSString) -> AVAudioPlayer {
         var path = NSBundle.mainBundle().pathForResource(file as String, ofType: type as String)
@@ -66,9 +67,6 @@ class ViewController: UIViewController, ADBannerViewDelegate {
         return audioPlayer!
     }
     
-    @IBOutlet var mainView: UIView!
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -81,9 +79,10 @@ class ViewController: UIViewController, ADBannerViewDelegate {
             noAds = false
         }
         
-        //println("no ads state: \(noAds)")
-        
         let screen = UIScreen.mainScreen().bounds
+        
+        mainView.frame = CGRectMake(0, 0, screen.width, screen.height)
+        view.addSubview(mainView)
         
         arrowWidthRatio = 170/375
         arrowWidth = arrowWidthRatio * screen.width
@@ -330,7 +329,6 @@ class ViewController: UIViewController, ADBannerViewDelegate {
         // creates the animation for the previous view to move away and reveal the new view
         UIView.animateWithDuration(2.0, delay: 0.0, usingSpringWithDamping: 0.9, initialSpringVelocity: 5.0, options: nil, animations: {prevBackgroundView.transform = transform}, completion: nil)
         
-        //mainView.backgroundColor = color //sets the background color to the random color
         currentColor = c
         lastColor = c
     }

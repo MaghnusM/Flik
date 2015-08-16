@@ -10,12 +10,14 @@
 import UIKit
 import iAd
 import AVFoundation
+import GameKit
 import Foundation
 import StoreKit
 
-class GameOverViewController: UIViewController, ADBannerViewDelegate {
+class GameOverViewController: UIViewController, ADBannerViewDelegate, GKGameCenterControllerDelegate {
     
     var score : Int!
+    var highscore: Int!
     var mode : Int!
     var initialColor : Int!
     var appID = 1000536418
@@ -129,6 +131,10 @@ class GameOverViewController: UIViewController, ADBannerViewDelegate {
         addMusicIcon()
         addEndGameOptionButton(buttonTitle: "RATE", xOffset: (-screen.width/4), yOffset: (arrowHeight/2.2 + arrowHeight))
         addEndGameOptionButton(buttonTitle: "MORE GAMES", xOffset: (screen.width/4), yOffset: (arrowHeight/2.2 + arrowHeight))
+        addEndGameOptionButton(buttonTitle: "SHARE", xOffset: (-screen.width/4), yOffset: (arrowHeight/2))
+        
+        //GAME CENTER
+        authenticateLocalPlayer()
     }
 
     override func viewDidAppear(animated: Bool) {
@@ -239,7 +245,6 @@ class GameOverViewController: UIViewController, ADBannerViewDelegate {
     }
     
     func positionAndSetUpHighScore(){
-        var highscore : Int = 0
         if mode == 1 {
             if (score > fileManager.readClassicScore()) {
                 fileManager.writeScore(score, mode: 1)
@@ -354,7 +359,10 @@ class GameOverViewController: UIViewController, ADBannerViewDelegate {
                 UIApplication.sharedApplication().openURL(NSURL(string : "itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=\(appID)&onlyLatestVersion=true&pageNumber=0&sortOrdering=1)")!)
             } else if sender.currentTitle == "MORE GAMES" {
                 UIApplication.sharedApplication().openURL(NSURL(string : "https://itunes.apple.com/us/artist/maghnus-mareneck/id1000536417")!)
+            } else if sender.currentTitle == "SHARE" {
+                shareHighscore(highscore)
             }
+
         }
     }
     
@@ -374,29 +382,54 @@ class GameOverViewController: UIViewController, ADBannerViewDelegate {
    
     override func viewWillDisappear(animated: Bool) {
     }
+    
+    func authenticateLocalPlayer(){
+        
+        var localPlayer = GKLocalPlayer.localPlayer()
+        
+        localPlayer.authenticateHandler = {(viewController, error) -> Void in
+            
+            if (viewController != nil) {
+                self.presentViewController(viewController, animated: true, completion: nil)
+            }
+                
+            else {
+                println((GKLocalPlayer.localPlayer().authenticated))
+            }
+        }
+    }
+    
+    func shareHighscore(score:Int) {
+        
+        //check if user is signed in
+        if GKLocalPlayer.localPlayer().authenticated {
+            var scoreReporter = GKScore(leaderboardIdentifier: "global_highscores") //leaderboard id here
+            scoreReporter.value = Int64(score) //score variable here (same as above)
+            var scoreArray: [GKScore] = [scoreReporter]
+            
+            GKScore.reportScores(scoreArray, withCompletionHandler: {(error : NSError!) -> Void in
+                if error != nil {
+                    println("error")
+                }
+            })
+        }
+        showLeaderboard()
+    }
+    
+    func showLeaderboard() {
+        var gc : GKGameCenterViewController = GKGameCenterViewController()
+        gc.gameCenterDelegate = self
+        //var vc = self.mainView.window?.rootViewController
+        self.view.window?.rootViewController?.presentViewController(gc, animated: true, completion: nil)
+    }
+    
+    func gameCenterViewControllerDidFinish(gameCenterViewController: GKGameCenterViewController!) {
+        gameCenterViewController.dismissViewControllerAnimated(true, completion: nil)
+        
+    }
 }
-    
-//    func showGameCenter() {
-//        let gameCenterController = new GKGameCenterViewController()
-//        if (gameCenterController != nil) {
-//            gameCenterController.gameCenterDelegate = self;
-//            gameCenterController.viewState = GKGameCenterViewControllerStateAchievements;
-//            UIViewController *vc = self.view.window.rootViewController;
-//            [vc presentViewController: gameCenterController animated: YES completion:nil];
-//        }
-//    } else if ([[touchedNode name] isEqualToString:@"Leaderboard"]) {
-//        GKGameCenterViewController *gameCenterController = [[GKGameCenterViewController alloc] init];
-//        if (gameCenterController != nil)
-//        {
-//            gameCenterController.gameCenterDelegate = self;
-//            gameCenterController.viewState = GKGameCenterViewControllerStateLeaderboards;
-//            UIViewController *vc = self.view.window.rootViewController;
-//            [vc presentViewController: gameCenterController animated: YES completion:nil];
-//        }
-//    }
-//    }
 
-    
+
     
     
 

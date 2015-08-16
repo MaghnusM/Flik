@@ -12,6 +12,8 @@ import AVFoundation
 
 class ArcadeModeViewController: UIViewController,  ADBannerViewDelegate {
 
+    var mainView = UIView()
+    
     var score = 0
     var rawScore = 1
     var difficulty = 3.0
@@ -88,6 +90,9 @@ class ArcadeModeViewController: UIViewController,  ADBannerViewDelegate {
 
         let screen = UIScreen.mainScreen().bounds
         
+        mainView.frame = CGRectMake(0, 0, screen.width, screen.height)
+        view.addSubview(mainView)
+        
         firstHighScore = true
         
         arrowWidthRatio = 170/375
@@ -105,8 +110,6 @@ class ArcadeModeViewController: UIViewController,  ADBannerViewDelegate {
         
         addBanner()
     }
-    
-    @IBOutlet var mainView: UIView!
     
     func firstChangeColor() {
         var c = Int(arc4random_uniform(4)) // picks a random number 0-3
